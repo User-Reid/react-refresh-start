@@ -1,11 +1,13 @@
-import Pizza from "../Components/Pizza";
+import Header from "../Components/Header";
+import Menu from "../Components/Menu";
+import Footer from "../Components/Footer";
 
 export default function App() {
   return (
     <div>
-      <Pizza />
-      <Pizza />
-      <Pizza />
+      <Header />
+      <Menu />
+      <Footer />
     </div>
   );
 }
