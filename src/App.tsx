@@ -1,7 +1,11 @@
+import Pizza from "../Components/Pizza";
+
 export default function App() {
   return (
     <div>
-      <h1>Howdy bitch</h1>
+      <Pizza />
+      <Pizza />
+      <Pizza />
     </div>
   );
 }
