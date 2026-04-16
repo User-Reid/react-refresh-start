@@ -1,3 +1,10 @@
 export default function Header() {
-  return <h1>Fast React Pizza Company</h1>;
+  // const style = { color: "red", fontSize: "48px", textTransform: "uppercase" };
+  const style = {};
+
+  return (
+    <header className="header">
+      <h1 style={style}>Fast React Pizza Company</h1>
+    </header>
+  );
 }

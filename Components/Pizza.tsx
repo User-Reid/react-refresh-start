@@ -46,13 +46,12 @@ export default function Pizza() {
 
   return (
     <div>
-      <h2>Pizza Spinaci</h2>
-      <p>Tomato, mozarella, spinach, and ricotta cheese</p>
       <img
         src="../public/pizzas/spinaci.jpg"
         alt="a picture of spinaci pizza"
-        style={{ width: "100px", height: "100px" }}
       />
+      <h3>Pizza Spinaci</h3>
+      <p>Tomato, mozarella, spinach, and ricotta cheese</p>
     </div>
   );
 }
