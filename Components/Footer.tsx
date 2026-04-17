@@ -5,9 +5,17 @@ export default function Footer() {
   const isOpen = hour >= openHour && hour <= closeHour;
   console.log(isOpen);
 
-  return (
-    <footer className="footer">
-      {new Date().toLocaleTimeString()} We're currently open
-    </footer>
-  );
+  if (!isOpen) {
+    return (
+      <p>
+        We're happy to welcome you between {openHour}:00 and {closeHour}:00.
+      </p>
+    );
+  } else {
+    return (
+      <footer className="footer">
+        {new Date().toLocaleTimeString()} "We are closed"
+      </footer>
+    );
+  }
 }

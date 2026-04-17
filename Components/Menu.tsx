@@ -57,11 +57,13 @@ export default function Menu() {
   return (
     <main className="menu">
       <h2>Our Menu</h2>
-      <ul className="pizzas">
-        {pizzaData.map((pizza) => (
-          <Pizza key={pizza.name} pizza={pizza} />
-        ))}
-      </ul>
+      {pizzaData && (
+        <ul className="pizzas">
+          {pizzaData.map((pizza) => (
+            <Pizza key={pizza.name} pizza={pizza} />
+          ))}
+        </ul>
+      )}
     </main>
   );
 }
