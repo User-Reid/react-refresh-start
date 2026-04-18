@@ -1,3 +1,5 @@
+import Order from "./Order";
+
 export default function Footer() {
   const hour = new Date().getHours();
   const openHour = 12;
@@ -5,17 +7,15 @@ export default function Footer() {
   const isOpen = hour >= openHour && hour <= closeHour;
   console.log(isOpen);
 
-  if (!isOpen) {
-    return (
-      <p>
-        We're happy to welcome you between {openHour}:00 and {closeHour}:00.
-      </p>
-    );
-  } else {
-    return (
-      <footer className="footer">
-        {new Date().toLocaleTimeString()} "We are closed"
-      </footer>
-    );
-  }
+  return (
+    <footer>
+      {isOpen ? (
+        <Order openHour={openHour} />
+      ) : (
+        <p>
+          We're closed, please visit us between {openHour}:00 & {closeHour}:00.
+        </p>
+      )}
+    </footer>
+  );
 }
